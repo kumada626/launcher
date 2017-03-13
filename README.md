@@ -3,12 +3,19 @@
 [![Latest Release][version-image]][version-url]
 [![Go Report Card][goreport-image]][goreport-url]
 
-> CLI for reading/writing from the project metadata
+> CLI for reading/writing project metadata
 
 ## Usage
 
 ```bash
 $ go get github.com/screwdriver-cd/meta-cli
+$ cd $GOPATH/src/github.com/screwdriver-cd/meta-cli
+$ go build -a -o meta
+$ ./meta set aaa bbb
+$ ./meta get aaa
+bbb
+$ ./meta set foo[2].bar[1] baz
+[null,null,{"bar":[null,"baz"]}]
 ```
 
 ## Testing
